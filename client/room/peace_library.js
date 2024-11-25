@@ -4,11 +4,12 @@ import * as teams from './default_teams.js';
 // разрешает все что можно для строительства
 function set_inventory() {
     const context = room.Inventory.GetContext();
-    context.Main.Value = true;
-    context.Secondary.Value = true;
-    context.Melee.Value = true;
-    context.Explosive.Value = true;
-    context.Build.Value = true;
+    context.Inventory.Mine.Value = true;
+    context.Inventory.Secondary.Value = true;
+    context.Inventory.Melee.Value = true;
+    context.Inventory.Explosive.Value = true;
+    context.Inventory.Bild.Value = true;
+    context.Inventory.BuildInfinity.Value = true;
 }
 
 function set_build_settings() {

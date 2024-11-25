@@ -4,11 +4,11 @@ import * as teams from './default_teams.js';
 // разрешает все что можно для строительства
 function set_inventory() {
     const context = room.Inventory.GetContext();
-    context.Main.Value = false;
-    context.Secondary.Value = false;
-    context.Melee.Value = false;
-    context.Explosive.Value = false;
-    context.Build.Value = false;
+    context.MainInfinity.Value = true;
+    context.SecondaryInfinity.Value = true;
+    context.Melee.Value = true;
+    context.Explosive.Value = true;
+    context.Build.Value = true;
 }
 
 function set_build_settings() {
@@ -75,14 +75,18 @@ export function create_teams() {
     // настройка инвентаря команд при их добавлении
     room.Teams.OnAddTeam.Add(function (team) {
         if (team.Name === teams.BLUE_TEAM_NAME) {
-            team.Inventory.Melee.Value = !blueHasNothing;
-            team.Inventory.Build.Value = !blueHasNothing;
-            team.Inventory.BuildInfinity.Value = !blueHasNothing;
+            team.Inventory.Main.Value = false;
+            team.Inventory.Secondary.Value = false;
+            team.Inventory.Melee.Value = false;
+            team.Inventory.Build.Value = false;
+            team.Inventory.BuildInfinity.Value = false;
         }
         else{
-            team.Inventory.Melee.Value = true;
-            team.Inventory.Build.Value = true;
-            team.Inventory.BuildInfinity.Value = true;
+            team.Inventory.Main.Value = false;
+            team.Inventory.Secondary.Value = false;
+            team.Inventory.Melee.Value = false;
+            team.Inventory.Build.Value = false;
+            team.Inventory.BuildInfinity.Value = false;
         }
     });
 

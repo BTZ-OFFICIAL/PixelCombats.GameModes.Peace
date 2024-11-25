@@ -2,7 +2,7 @@
   "ApiVersion": 2,
   "Name": "PEACE",
   "Description": "Мирный режим",
-  "StartClientVersion": 532,
+  "StartClientVersion": 593,
   "MapLists": [
     {
       "MapListId": 324,

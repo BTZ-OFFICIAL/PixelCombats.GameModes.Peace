@@ -4,8 +4,8 @@ import * as teams from './default_teams.js';
 // разрешает все что можно для строительства
 function set_inventory() {
     const context = room.Inventory.GetContext();
-    context.MainInfinity.Value = true;
-    context.SecondaryInfinity.Value = true;
+    context.Main.Value = true;
+    context.Secondary.Value = true;
     context.Melee.Value = true;
     context.Explosive.Value = true;
     context.Build.Value = true;

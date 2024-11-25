@@ -4,12 +4,11 @@ import * as teams from './default_teams.js';
 // разрешает все что можно для строительства
 function set_inventory() {
     const context = room.Inventory.GetContext();
-    context.Mine.Value = true;
+    context.Maine.Value = true;
     context.Secondary.Value = true;
     context.Melee.Value = true;
-    context.Explosive.Value = true;
-    context.Bild.Value = true;
-    context.BuildInfinity.Value = true;
+    context.Exposive.Value = true;
+    context.Build.Value = true;
 }
 
 function set_build_settings() {
@@ -79,7 +78,7 @@ export function create_teams() {
             team.Inventory.Main.Value = false;
             team.Inventory.Secondary.Value = false;
             team.Inventory.Melee.Value = false;
-            team.Inventory.Explosive.Value = false;
+            team.Inventory.Exposive.Value = false;
             team.Inventory.Build.Value = false;
             team.Inventory.BuildInfinity.Value = false;
         }
@@ -87,7 +86,7 @@ export function create_teams() {
             team.Inventory.Main.Value = false;
             team.Inventory.Secondary.Value = false;
             team.Inventory.Melee.Value = false;
-            team.Inventory.Expolsive.Value = false;
+            team.Inventory.Exposive.Value = false;
             team.Inventory.Build.Value = false;
             team.Inventory.BuildInfinity.Value = false;
         }
